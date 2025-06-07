@@ -10,7 +10,6 @@ html, body {
   background-color: #F3F2ED;
   color: #272727;
   margin: 0 auto;
-  padding: 1em;
   max-width: 900px;
   line-height: 1.5;
   font-size: 16px; }
@@ -22,11 +21,14 @@ header {
     color: inherit;
     text-decoration: inherit; }
   header hr {
-    margin: 0; }
+    margin: 0;
+    border-top: 1px dotted #272727; }
 
 nav {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  max-width: 50%;
+  margin: 0 auto; }
   nav a {
     flex: 1;
     text-align: center;
@@ -71,6 +73,8 @@ a {
 
 section {
   text-align: right; }
+  section h1 {
+    margin-bottom: 1em; }
   section time {
     font-weight: 800;
     display: block;
@@ -100,26 +104,32 @@ figure {
     font-size: 0.9em;
     margin-top: 0.2em; }
 
-ul {
+ul.article__list {
   line-height: 1.2;
   list-style: none;
   margin: 0;
   padding: 0; }
-  ul li > a {
-    text-decoration: underline;
-    padding: 0em 0.4em;
-    font-weight: 800; }
-  ul li time {
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    opacity: 0.5;
-    font-family: monospace; }
+  ul.article__list li {
+    display: flex;
+    justify-content: space-between; }
+    ul.article__list li > a {
+      text-decoration: none;
+      padding: 0;
+      font-weight: 800; }
+    ul.article__list li time {
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-family: monospace;
+      color: #a8a8a8;
+      flex: 1;
+      text-align: right;
+      border-bottom: 1px solid #a8a8a8; }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   body {
-    padding: 1em;
+    padding: 0 1em;
     font-size: 15px; }
   h1 {
     font-size: 1.5em; }

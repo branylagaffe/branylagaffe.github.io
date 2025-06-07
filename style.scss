@@ -13,7 +13,6 @@ $line-height: 1.5;
 
 $background-color: #F3F2ED;
 $text-color: #272727;
-$link-color: #272727;
 $hover-color: #D50B8B;
 $code-bg-color: #E3E3E6;
 $border-color: #D50B8B;
@@ -30,7 +29,6 @@ html, body {
   background-color: $background-color;
   color: $text-color;
   margin: 0 auto;
-  padding: 1em;
   max-width: $max-width;
   line-height: $line-height;
   font-size: $font-size-base;
@@ -47,14 +45,18 @@ header {
 
   hr {
     margin: 0;
+    border-top: 1px dotted $text-color;
   }
 }
 
 nav {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
+    max-width: 50%;
+    margin: 0 auto;
 
-  a {
+
+    a {
     flex: 1;
     text-align: center;
     cursor: pointer;
@@ -69,7 +71,7 @@ nav {
       color: $hover-color;
       background-color: $background-color;
     }
-  }
+    }
 }
 
 h1, h2, h3 {
@@ -92,7 +94,7 @@ p {
 }
 
 a {
-  color: $link-color;
+  color: $text-color;
   text-decoration: underline;
 
   &:hover,
@@ -105,6 +107,8 @@ a {
 
 section {
   text-align: right;
+
+    h1 {margin-bottom: 1em;}
 
   time {
     font-weight: $font-weight-bold;
@@ -143,34 +147,39 @@ figure {
   }
 }
 
-ul {
+ul.article__list {
     line-height: 1.2;
     list-style: none;
     margin: 0;
     padding: 0;
 
     li {
+        display: flex;
+        justify-content: space-between;
+
         > a {
-            text-decoration: underline;
-            padding: 0em 0.4em;
+            text-decoration: none;
+            padding: 0;
             font-weight: $font-weight-bold;;
         }
 
-
         time {
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        opacity: 0.5;
-        font-family: monospace;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: monospace;
+            color: #a8a8a8;
+            flex:1;
+            text-align: right;
+            border-bottom: 1px solid #a8a8a8;
         }
     }
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   body {
-    padding: 1em;
+    padding: 0 1em;
     font-size: 15px;
   }
 
@@ -193,7 +202,7 @@ pre {
   background-color: $code-bg-color;
   padding: 1em;
   overflow-x: auto;
-  border-left: 4px solid $link-color;
+  border-left: 4px solid $text-color;
   margin: 1em 0;
   font-family: monospace;
 
