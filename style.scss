@@ -9,11 +9,11 @@ $font-size-base: 16px;
 $font-size-h1: 2em;
 $font-size-h2: 1.5em;
 $font-size-h3: 1.2em;
-$line-height: 1.7;
+$line-height: 1.5;
 
 $background-color: #F3F2ED;
 $text-color: #272727;
-$link-color: #64E2B7;
+$link-color: #272727;
 $hover-color: #D50B8B;
 $code-bg-color: #E3E3E6;
 $border-color: #D50B8B;
@@ -141,6 +141,30 @@ figure {
     font-size: 0.9em;
     margin-top: 0.2em;
   }
+}
+
+ul {
+    line-height: 1.2;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        > a {
+            text-decoration: underline;
+            padding: 0em 0.4em;
+            font-weight: $font-weight-bold;;
+        }
+
+
+        time {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        opacity: 0.5;
+        font-family: monospace;
+        }
+    }
 }
 
 /* Responsive */

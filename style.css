@@ -1,39 +1,32 @@
 /* Variables */
 /* Global font and reset */
-/* line 22, style.scss */
 * {
   font-family: "Merriweather", serif;
   font-weight: 400;
   font-style: normal;
   box-sizing: border-box; }
 
-/* line 29, style.scss */
 html, body {
   background-color: #F3F2ED;
   color: #272727;
   margin: 0 auto;
   padding: 1em;
   max-width: 900px;
-  line-height: 1.7;
+  line-height: 1.5;
   font-size: 16px; }
 
-/* line 39, style.scss */
 header {
   text-align: center;
   margin-bottom: 4em; }
-  /* line 43, style.scss */
   header > a {
     color: inherit;
     text-decoration: inherit; }
-  /* line 48, style.scss */
   header hr {
     margin: 0; }
 
-/* line 53, style.scss */
 nav {
   display: flex;
   justify-content: space-around; }
-  /* line 57, style.scss */
   nav a {
     flex: 1;
     text-align: center;
@@ -43,104 +36,99 @@ nav {
     text-decoration: none;
     font-weight: 800;
     text-transform: uppercase; }
-    /* line 67, style.scss */
     nav a:hover, nav a:focus {
       color: #D50B8B;
       background-color: #F3F2ED; }
 
-/* line 75, style.scss */
 h1, h2, h3 {
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 0; }
 
-/* line 81, style.scss */
 h1 {
   font-size: 2em; }
 
-/* line 82, style.scss */
 h2 {
   font-size: 1.5em; }
 
-/* line 83, style.scss */
 h3 {
   font-size: 1.2em; }
 
-/* line 85, style.scss */
 p, a {
   font-size: 1rem; }
 
-/* line 89, style.scss */
 p {
   text-align: justify;
   margin: 0.5em 0 1em 0; }
 
-/* line 94, style.scss */
 a {
-  color: #64E2B7;
+  color: #272727;
   text-decoration: underline; }
-  /* line 98, style.scss */
   a:hover, a:focus {
     color: #D50B8B;
     background: #272727;
     cursor: pointer; }
 
-/* line 106, style.scss */
 section {
   text-align: right; }
-  /* line 109, style.scss */
   section time {
     font-weight: 800;
     display: block;
     margin-top: 0;
     color: #D50B8B; }
 
-/* line 117, style.scss */
 hr {
   border: none;
   border-top: 1px solid #D50B8B;
   margin-bottom: 2em; }
 
-/* line 123, style.scss */
 em {
   color: #D50B8B;
   font-weight: 400;
   text-transform: lowercase; }
 
-/* line 129, style.scss */
 img {
   width: 100%;
   height: auto;
   border: 1px solid #D50B8B;
   border-radius: 2px; }
 
-/* line 136, style.scss */
 figure {
   margin: 1em 0;
   text-align: center; }
-  /* line 140, style.scss */
   figure figcaption {
     font-size: 0.9em;
     margin-top: 0.2em; }
 
+ul {
+  line-height: 1.2;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  ul li > a {
+    text-decoration: underline;
+    padding: 0em 0.4em;
+    font-weight: 800; }
+  ul li time {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0.5;
+    font-family: monospace; }
+
 /* Responsive */
 @media (max-width: 600px) {
-  /* line 148, style.scss */
   body {
     padding: 1em;
     font-size: 15px; }
-  /* line 153, style.scss */
   h1 {
     font-size: 1.5em; }
-  /* line 154, style.scss */
   h2 {
     font-size: 1.2em; }
-  /* line 155, style.scss */
   h3 {
     font-size: 1.1em; } }
 
 /* Code blocks */
-/* line 159, style.scss */
 code {
   color: #D50B8B;
   background-color: #E3E3E6;
@@ -149,15 +137,13 @@ code {
   font-family: monospace;
   font-weight: 600; }
 
-/* line 168, style.scss */
 pre {
   background-color: #E3E3E6;
   padding: 1em;
   overflow-x: auto;
-  border-left: 4px solid #64E2B7;
+  border-left: 4px solid #272727;
   margin: 1em 0;
   font-family: monospace; }
-  /* line 176, style.scss */
   pre span {
     -webkit-user-select: none;
     -ms-user-select: none;
