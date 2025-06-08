@@ -131,6 +131,8 @@ ul.article__list {
   body {
     padding: 0 1em;
     font-size: 15px; }
+  nav {
+    max-width: unset; }
   h1 {
     font-size: 1.5em; }
   h2 {
