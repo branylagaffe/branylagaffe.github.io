@@ -1,4 +1,31 @@
 <?php
+
+function figure($image_path, $caption) {
+?>
+    <figure>
+        <img loading="lazy" src="<?= $image_path ?>" alt="<?= $caption ?>">
+        <figcaption><?= $caption ?></figcaption>
+    </figure>
+<?php
+}
+
+function cli_input($command) {
+    echo "<span>$ </span>$command\n";
+}
+
+function cli_output($result) {
+    echo "<span>> $result</span>\n";
+}
+
+function code($code_word) {
+    echo "<code>$code_word</code>";
+}
+
+function h($title) {
+        echo "<h3>$title</h3>";
+        echo "<hr>";
+}
+
 /**
  * Find all directory containing a 'src.php. file
  */
