@@ -65,7 +65,7 @@ function generate($src_dir) {
 
     include("header.php");
     include($src);
-    /* include("footer.php"); */
+    include("footer.php");
 
     $contents = ob_get_contents();
 
