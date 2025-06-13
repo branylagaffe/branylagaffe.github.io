@@ -22,12 +22,12 @@
     <body>
         <header>
             <a href="/index.html">
-                <h1>Garage<em>c0re</em></h1>
+                <h1>Garage<em id="header">c0re</em></h1>
             </a>
-            <hr>
+            <hr class="dotted">
             <nav>
                 <a href="/index.html" >Article</a>
-                <a href="/about.html" >About</a>
+                <a href="/about/index.html" >About</a>
                 <a href="#" >Contact</a>
             </nav>
         </header>

@@ -43,10 +43,6 @@ header {
     text-decoration: inherit;
   }
 
-  hr {
-    margin: 0;
-    border-top: 1px dotted $text-color;
-  }
 }
 
 nav {
@@ -56,7 +52,7 @@ nav {
     margin: 0 auto;
 
 
-    a {
+   a {
     flex: 1;
     text-align: center;
     cursor: pointer;
@@ -66,11 +62,11 @@ nav {
     font-weight: $font-weight-bold;
     text-transform: uppercase;
 
-    &:hover,
-    &:focus {
-      color: $hover-color;
-      background-color: $background-color;
-    }
+        &:hover,
+        &:focus {
+          color: $hover-color;
+          background-color: $background-color;
+        }
     }
 }
 
@@ -89,8 +85,13 @@ p, a {
 }
 
 p {
-  text-align: justify;
-  margin: 0.5em 0 1em 0;
+    text-align: justify;
+    margin: {
+        top: 0.5em;
+        right: 0;
+        bottom: 1em;
+        left: 0;
+    }
 }
 
 a {
@@ -119,15 +120,55 @@ section {
 }
 
 hr {
-  border: none;
-  border-top: 1px solid $hover-color;
-  margin-bottom: 2em;
+    margin: {
+        bottom: 2em;
+    }
+
+    border: none {
+        top: {
+            width: 1px;
+            style: solid;
+            color: $hover-color;
+        }
+
+    }
+
+    &.dark {
+        border-top: {
+            width: 2px;
+            style: solid;
+            color: $text-color;
+        }
+    }
+
+    &.dotted {
+        border-top: {
+            width: 1px;
+            style: dotted;
+            color: $text-color;
+        }
+    }
+
+    header & { margin: 0; }
+    footer & {
+        margin: {top: 4em;}
+        &:after {
+            content: "⚒";
+            display: block;
+            text-align: center;
+            padding: 1em 0;
+        }
+    }
 }
 
 em {
-  color: $hover-color;
-  font-weight: $font-weight-normal;
-  text-transform: lowercase;
+    color: $hover-color;
+    font-weight: $font-weight-bold;
+
+    &#header {
+        text-transform: lowercase;
+        font-weight: $font-weight-normal;
+    }
 }
 
 img {
@@ -176,20 +217,6 @@ ul.article__list {
     }
 }
 
-/* Responsive */
-@media (max-width: 800px) {
-  body {
-    padding: 0 1em;
-    font-size: 15px;
-  }
-
-  nav {max-width: unset;}
-
-  h1 { font-size: 1.5em; }
-  h2 { font-size: 1.2em; }
-  h3 { font-size: 1.1em; }
-}
-
 /* Code blocks */
 code {
   color: $hover-color;
@@ -215,4 +242,18 @@ pre {
     opacity: 0.5;
     font-family: inherit;
   }
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  body {
+    padding: 0 1em;
+    font-size: 15px;
+  }
+
+  nav {max-width: unset;}
+
+  h1 { font-size: 1.5em; }
+  h2 { font-size: 1.2em; }
+  h3 { font-size: 1.1em; }
 }
