@@ -22,8 +22,12 @@ function code($code_word) {
 }
 
 function h($title) {
-        echo "<h3>$title</h3>";
-        echo "<hr>";
+    echo "<h3>$title</h3>";
+    echo "<hr>";
+}
+
+function a($url, $content) {
+    echo "<a href=\"$url\" target=\"_blank\" rel=\"noopener noreferrer\">$content</a>";
 }
 
 /**
@@ -81,7 +85,7 @@ function generate($src_dir) {
 * MAIN SCRIPT
 */
 $folders = find_articles(".");
-foreach ($folders as $key => $folder) {
+foreach ($folders as $_ => $folder) {
     generate($folder);
 }
 
